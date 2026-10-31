@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Details | Crochet & Co. Handmade Boutique</title>
+  <meta name="description" content="View details, materials, care instructions, and color options for our handmade crochet accessories.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar" aria-label="Announcement">
+    ✨ Free Delivery across Pakistan on orders over Rs. 3,000 | 100% Milk Cotton Handcrafted ♡
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span>Crochet <span class="amp">&</span> Co.</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-btn" onclick="openSearchModal()" title="Search Products" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <a href="wishlist.html" class="nav-btn" title="View Wishlist" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="nav-counter wishlist-counter" style="display: none;">0</span>
+        </a>
+        <a href="cart.html" class="nav-btn" title="Shopping Cart" aria-label="Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="nav-counter cart-counter" style="display: none;">0</span>
+        </a>
+        <button type="button" class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" style="font-size: 1.35rem;">
+        <span class="logo-icon" style="width: 32px; height: 32px; font-size: 0.9rem;"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span>Crochet <span class="amp">&</span> Co.</span>
+      </a>
+      <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="shop.html" class="mobile-nav-link active">Shop Collection <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="categories.html" class="mobile-nav-link">Browse Categories <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="wishlist.html" class="mobile-nav-link">My Wishlist <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="cart.html" class="mobile-nav-link">Shopping Cart <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="about.html" class="mobile-nav-link">Our Story <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & FAQ <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+    </div>
+    <div class="drawer-footer">
+      <p><i class="fa-solid fa-phone" style="color: var(--color-pink-dark); margin-right: 0.4rem;"></i> WhatsApp: +92 300 1234567</p>
+      <p><i class="fa-solid fa-location-dot" style="color: var(--color-pink-dark); margin-right: 0.4rem;"></i> Lahore, Pakistan</p>
+    </div>
+  </aside>
+
+  <!-- Breadcrumbs Bar -->
+  <div style="background: var(--color-warm-cream); border-bottom: 1px solid var(--color-border); padding: 1rem 0;">
+    <div class="container">
+      <div class="breadcrumbs" style="justify-content: flex-start;" id="product-breadcrumb">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <a href="shop.html">Shop</a>
+        <span>/</span>
+        <a href="shop.html" id="bc-category">Category</a>
+        <span>/</span>
+        <span class="current" id="bc-product-name">Product Name</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Product Detail Section -->
+  <main class="section-padding" style="padding-top: 3rem;">
+    <div class="container">
+      
+      <!-- Product Details Card Grid -->
+      <div class="product-detail-grid" id="product-detail-wrapper">
+        <!-- Left: Gallery -->
+        <div class="gallery-wrapper">
+          <div class="gallery-main-image">
+            <img id="detail-main-img" src="" alt="Crochet Product Preview">
+          </div>
+          <div class="gallery-thumbs" id="detail-thumbs-list">
+            <!-- Thumbnails injected via JS -->
+          </div>
+        </div>
+
+        <!-- Right: Info -->
+        <div class="product-detail-info">
+          <div class="detail-badge-row">
+            <span class="badge badge-pink" id="detail-badge" style="display: none;"></span>
+            <span class="badge badge-sage"><i class="fa-solid fa-circle" style="font-size: 0.5rem; margin-right: 4px;"></i> In Stock • Ready to Dispatch</span>
+          </div>
+
+          <span class="product-category" id="detail-category-link">Collection</span>
+          <h1 class="detail-title" id="detail-title">Loading Product...</h1>
+
+          <div class="detail-rating-row">
+            <div class="product-rating" style="margin-bottom: 0;">
+              <i class="fa-solid fa-star"></i>
+              <span id="detail-rating-num" style="font-weight: 600; color: var(--color-text-dark);">5.0</span>
+            </div>
+            <span class="rating-count" id="detail-reviews-num" style="color: var(--color-text-muted);">(42 verified reviews)</span>
+            <span style="color: var(--color-border);">|</span>
+            <span style="font-size: 0.85rem; color: var(--color-text-muted);"><i class="fa-solid fa-shield-halved" style="color: var(--color-pink-dark);"></i> 100% Handcrafted</span>
+          </div>
+
+          <div class="detail-price-row">
+            <span class="detail-current-price" id="detail-price">Rs. 0</span>
+            <span class="detail-original-price" id="detail-original-price"></span>
+          </div>
+
+          <p class="detail-short-desc" id="detail-short-desc"></p>
+
+          <!-- Color Swatches -->
+          <div class="option-block">
+            <div class="option-title">
+              Select Color Palette: <span id="selected-color-name" style="font-weight: 400; color: var(--color-pink-dark);"></span>
+            </div>
+            <div class="color-swatches" id="detail-color-swatches"></div>
+          </div>
+
+          <!-- Quantity & Action Buttons -->
+          <div class="action-row">
+            <div class="quantity-stepper">
+              <button type="button" class="qty-btn" id="btn-qty-minus" aria-label="Decrease quantity">
+                <i class="fa-solid fa-minus"></i>
+              </button>
+              <input type="text" id="detail-qty-input" class="qty-input" value="1" readonly>
+              <button type="button" class="qty-btn" id="btn-qty-plus" aria-label="Increase quantity">
+                <i class="fa-solid fa-plus"></i>
+              </button>
+            </div>
+
+            <div class="detail-actions">
+              <button type="button" class="btn btn-primary" id="btn-detail-add-cart" style="flex: 1;">
+                <i class="fa-solid fa-basket-shopping"></i> Add to Cart
+              </button>
+              <button type="button" class="btn btn-buy-now" id="btn-detail-buy-now" style="flex: 1;">
+                <i class="fa-solid fa-bolt"></i> Buy Now
+              </button>
+              <button type="button" class="btn-wishlist" id="btn-detail-wishlist" style="position: static; width: 48px; height: 48px; font-size: 1.2rem;" title="Add to Wishlist">
+                <i class="fa-regular fa-heart"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Guarantees & Perks -->
+          <div class="detail-perks">
+            <div class="detail-perk">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span>Delivery: 3-5 days across Pakistan</span>
+            </div>
+            <div class="detail-perk">
+              <i class="fa-solid fa-money-bill-wave"></i>
+              <span>Cash on Delivery available</span>
+            </div>
+            <div class="detail-perk">
+              <i class="fa-solid fa-leaf"></i>
+              <span>100% Combed Milk Cotton</span>
+            </div>
+            <div class="detail-perk">
+              <i class="fa-solid fa-gift"></i>
+              <span>Complimentary Gift Wrap</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tabbed Information (Description, Materials, Care, Shipping) -->
+      <div class="product-tabs-wrapper">
+        <div class="tab-nav">
+          <button type="button" class="tab-nav-btn active" data-tab="tab-desc">Story & Description</button>
+          <button type="button" class="tab-nav-btn" data-tab="tab-materials">Materials & Specs</button>
+          <button type="button" class="tab-nav-btn" data-tab="tab-care">Care Instructions</button>
+          <button type="button" class="tab-nav-btn" data-tab="tab-shipping">Delivery & Returns</button>
+        </div>
+
+        <div class="tab-content active" id="tab-desc">
+          <p id="tab-desc-content" style="font-size: 1rem;"></p>
+        </div>
+
+        <div class="tab-content" id="tab-materials">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.5rem;">
+            <div>
+              <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">Yarn & Hardware:</h4>
+              <p id="tab-materials-content"></p>
+            </div>
+            <div>
+              <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">Dimensions:</h4>
+              <p id="tab-dimensions-content"></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-content" id="tab-care">
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">How to Preserve Your Handmade Crochet:</h4>
+          <p id="tab-care-content"></p>
+          <ul style="list-style: disc; margin-left: 1.5rem; margin-top: 0.8rem;">
+            <li>Always spot-clean with a damp microfiber cloth and gentle baby shampoo or wool wash.</li>
+            <li>Do not bleach, machine wash vigorously, or tumble dry.</li>
+            <li>Reshape gently while damp and lay flat in shade to air dry.</li>
+          </ul>
+        </div>
+
+        <div class="tab-content" id="tab-shipping">
+          <h4 style="font-size: 1.05rem; margin-bottom: 0.5rem; color: var(--color-text-dark);">Shipping Across Pakistan:</h4>
+          <p>
+            Every order is carefully bubble-wrapped inside our signature pastel box with tissue wrap and thank-you card.
+          </p>
+          <ul style="list-style: disc; margin-left: 1.5rem; margin-top: 0.8rem;">
+            <li><strong>Standard Delivery:</strong> 3 to 5 business days via courier (TCS / Trax / Call Courier).</li>
+            <li><strong>Delivery Charges:</strong> Flat Rs. 200 anywhere in Pakistan.</li>
+            <li><strong>Free Delivery:</strong> On all orders of Rs. 3,000 and above!</li>
+            <li><strong>Cash on Delivery (COD):</strong> Pay in cash at your doorstep when your package arrives safely.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Related Products Section -->
+      <section style="margin-top: 4rem;">
+        <div class="section-header">
+          <span class="section-tag"><i class="fa-solid fa-heart"></i> You May Also Love</span>
+          <h2 class="section-title">Related Handcrafts</h2>
+          <p class="section-desc">More complementary pieces from our collection.</p>
+        </div>
+
+        <div class="products-grid" id="related-products-grid">
+          <!-- Injected via JavaScript -->
+        </div>
+      </section>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <span>Crochet <span class="amp">&</span> Co.</span>
+          </a>
+          <p class="footer-bio">
+            A premium pastel boutique for handmade crochet accessories. Stitched stitch-by-stitch with soft milk cotton yarn and love.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/923001234567" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop All Products</a>
+            <a href="categories.html">Categories</a>
+            <a href="wishlist.html">My Wishlist</a>
+            <a href="cart.html">View Cart</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <div class="footer-links">
+            <a href="shop.html?category=keychains">Crochet Keychains</a>
+            <a href="shop.html?category=earrings">Handmade Earrings</a>
+            <a href="shop.html?category=pouches">Crochet Mini Pouches</a>
+            <a href="shop.html?category=hairbands">Crochet Hairbands</a>
+            <a href="shop.html?category=hair-clips">Handmade Hair Clips</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-truck"></i>
+            <span>Delivery: 3-5 Business Days across Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-shield-heart"></i>
+            <span>100% Pure Milk Cotton</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hello@crochetandco.pk</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© 2026 <strong>Crochet & Co.</strong> All rights reserved. Handcrafted with love in Pakistan.</div>
+        <div class="payment-badges">
+          <span class="payment-tag"><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</span>
+          <span class="payment-tag"><i class="fa-solid fa-shield-halved"></i> 100% Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    let currentProduct = null;
+    let selectedColorName = null;
+    let selectedQuantity = 1;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const idParam = params.get('id');
+      const productId = idParam ? parseInt(idParam, 10) : 1;
+
+      currentProduct = getProductById(productId) || PRODUCTS[0];
+      renderProductPage(currentProduct);
+      setupTabs();
+      setupQuantityButtons();
+    });
+
+    function renderProductPage(product) {
+      document.title = `${product.name} | Crochet & Co.`;
+
+      // Breadcrumb
+      document.getElementById('bc-category').textContent = product.categoryName;
+      document.getElementById('bc-category').href = `shop.html?category=${product.category}`;
+      document.getElementById('bc-product-name').textContent = product.name;
+
+      // Badges & Titles
+      const badgeEl = document.getElementById('detail-badge');
+      if (product.badge) {
+        badgeEl.textContent = product.badge;
+        badgeEl.style.display = 'inline-block';
+      } else {
+        badgeEl.style.display = 'none';
+      }
+
+      document.getElementById('detail-category-link').textContent = product.categoryName;
+      document.getElementById('detail-title').textContent = product.name;
+      document.getElementById('detail-rating-num').textContent = product.rating.toFixed(1);
+      document.getElementById('detail-reviews-num').textContent = `(${product.reviewsCount} customer reviews)`;
+      document.getElementById('detail-price').textContent = formatPrice(product.price);
+
+      const origPriceEl = document.getElementById('detail-original-price');
+      if (product.originalPrice) {
+        origPriceEl.textContent = formatPrice(product.originalPrice);
+        origPriceEl.style.display = 'inline';
+      } else {
+        origPriceEl.style.display = 'none';
+      }
+
+      document.getElementById('detail-short-desc').textContent = product.shortDesc;
+
+      // Gallery Images
+      const mainImg = document.getElementById('detail-main-img');
+      mainImg.src = getProductMainImage(product);
+      mainImg.alt = product.name;
+
+      const thumbsList = document.getElementById('detail-thumbs-list');
+      thumbsList.innerHTML = product.images.map((imgSrc, idx) => `
+        <div class="gallery-thumb-item ${idx === 0 ? 'active' : ''}" onclick="swapGalleryImage('${imgSrc}', this)">
+          <img src="${imgSrc}" alt="${product.name} thumbnail ${idx + 1}">
+        </div>
+      `).join('');
+
+      // Colors
+      const colorContainer = document.getElementById('detail-color-swatches');
+      const colorLabel = document.getElementById('selected-color-name');
+      if (product.colors && product.colors.length > 0) {
+        selectedColorName = product.colors[0].name;
+        colorLabel.textContent = selectedColorName;
+
+        colorContainer.innerHTML = product.colors.map((c, idx) => `
+          <button type="button" class="color-swatch ${idx === 0 ? 'active' : ''}" 
+                  style="background-color: ${c.hex};" 
+                  title="${c.name}" 
+                  onclick="selectDetailColor('${c.name}', this)"></button>
+        `).join('');
+      } else {
+        selectedColorName = 'Default';
+        colorLabel.textContent = 'Standard';
+      }
+
+      // Wishlist Button state
+      const wishBtn = document.getElementById('btn-detail-wishlist');
+      const isWish = isInWishlist(product.id);
+      wishBtn.setAttribute('data-wishlist-id', product.id);
+      if (isWish) {
+        wishBtn.classList.add('active');
+        wishBtn.innerHTML = '<i class="fa-solid fa-heart"></i>';
+      } else {
+        wishBtn.classList.remove('active');
+        wishBtn.innerHTML = '<i class="fa-regular fa-heart"></i>';
+      }
+      wishBtn.onclick = (e) => toggleWishlist(product.id, e);
+
+      // Add to Cart / Buy Now actions
+      const addCartBtn = document.getElementById('btn-detail-add-cart');
+      addCartBtn.onclick = () => {
+        addToCart(product.id, selectedQuantity, selectedColorName);
+      };
+
+      const buyNowBtn = document.getElementById('btn-detail-buy-now');
+      buyNowBtn.onclick = () => {
+        addToCart(product.id, selectedQuantity, selectedColorName, false);
+        window.location.href = 'checkout.html';
+      };
+
+      // Tabs contents
+      document.getElementById('tab-desc-content').textContent = product.description;
+      document.getElementById('tab-materials-content').textContent = product.materials;
+      document.getElementById('tab-dimensions-content').textContent = product.dimensions;
+      document.getElementById('tab-care-content').textContent = product.care;
+
+      // Related Products
+      const relatedGrid = document.getElementById('related-products-grid');
+      const relatedItems = getRelatedProducts(product.id, 4);
+      relatedGrid.innerHTML = relatedItems.map(createProductCardHTML).join('');
+    }
+
+    function swapGalleryImage(src, thumbElement) {
+      document.getElementById('detail-main-img').src = src;
+      document.querySelectorAll('.gallery-thumb-item').forEach(el => el.classList.remove('active'));
+      if (thumbElement) thumbElement.classList.add('active');
+    }
+
+    function selectDetailColor(name, buttonElement) {
+      selectedColorName = name;
+      document.getElementById('selected-color-name').textContent = name;
+      document.querySelectorAll('#detail-color-swatches .color-swatch').forEach(el => el.classList.remove('active'));
+      if (buttonElement) buttonElement.classList.add('active');
+    }
+
+    function setupQuantityButtons() {
+      const minusBtn = document.getElementById('btn-qty-minus');
+      const plusBtn = document.getElementById('btn-qty-plus');
+      const input = document.getElementById('detail-qty-input');
+
+      minusBtn.addEventListener('click', () => {
+        if (selectedQuantity > 1) {
+          selectedQuantity--;
+          input.value = selectedQuantity;
+        }
+      });
+
+      plusBtn.addEventListener('click', () => {
+        selectedQuantity++;
+        input.value = selectedQuantity;
+      });
+    }
+
+    function setupTabs() {
+      const tabBtns = document.querySelectorAll('.tab-nav-btn');
+      const tabContents = document.querySelectorAll('.tab-content');
+
+      tabBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+          tabBtns.forEach(b => b.classList.remove('active'));
+          tabContents.forEach(c => c.classList.remove('active'));
+
+          btn.classList.add('active');
+          const target = btn.getAttribute('data-tab');
+          document.getElementById(target)?.classList.add('active');
+        });
+      });
+    }
+  </script>
+</body>
+</html>

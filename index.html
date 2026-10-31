@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crochet & Co. | Handmade Pastel Crochet Accessories Boutique</title>
+  <meta name="description" content="Discover adorable handmade crochet accessories crafted with milk cotton yarn. Keychains, earrings, mini pouches, hairbands, and hair clips in Pakistan.">
+  
+  <!-- Font Awesome 6 Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar" aria-label="Announcement">
+    ✨ Free Delivery across Pakistan on orders over Rs. 3,000 | 100% Handmade with Love ♡ <a href="shop.html">Shop Now</a>
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span>Crochet <span class="amp">&</span> Co.</span>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link active">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Action Icons -->
+      <div class="nav-actions">
+        <!-- Search Trigger -->
+        <button type="button" class="nav-btn" onclick="openSearchModal()" title="Search Products" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+
+        <!-- Wishlist Link -->
+        <a href="wishlist.html" class="nav-btn" title="View Wishlist" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="nav-counter wishlist-counter" style="display: none;">0</span>
+        </a>
+
+        <!-- Cart Link -->
+        <a href="cart.html" class="nav-btn" title="Shopping Cart" aria-label="Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="nav-counter cart-counter" style="display: none;">0</span>
+        </a>
+
+        <!-- Mobile Hamburger Toggle -->
+        <button type="button" class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Menu Drawer & Overlay -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" style="font-size: 1.35rem;">
+        <span class="logo-icon" style="width: 32px; height: 32px; font-size: 0.9rem;"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span>Crochet <span class="amp">&</span> Co.</span>
+      </a>
+      <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link active">Home <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="shop.html" class="mobile-nav-link">Shop Collection <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="categories.html" class="mobile-nav-link">Browse Categories <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="wishlist.html" class="mobile-nav-link">My Wishlist <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="cart.html" class="mobile-nav-link">Shopping Cart <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="about.html" class="mobile-nav-link">Our Story <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & FAQ <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+    </div>
+    <div class="drawer-footer">
+      <p><i class="fa-solid fa-phone" style="color: var(--color-pink-dark); margin-right: 0.4rem;"></i> WhatsApp: +92 300 1234567</p>
+      <p><i class="fa-solid fa-location-dot" style="color: var(--color-pink-dark); margin-right: 0.4rem;"></i> Lahore, Pakistan</p>
+      <a href="shop.html" class="btn btn-primary" style="width: 100%; margin-top: 0.5rem;">Explore Shop</a>
+    </div>
+  </aside>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-grid">
+        <!-- Hero Text -->
+        <div class="hero-content">
+          <div class="hero-badge">
+            <i class="fa-solid fa-heart" style="color: var(--color-pink-dark);"></i>
+            <span>Pure Handcrafted Milk Cotton Magic</span>
+          </div>
+          <h1 class="hero-title">
+            Handmade with Love, <br>
+            <span class="highlight">Just for You ♡</span>
+          </h1>
+          <p class="hero-desc">
+            Discover adorable handmade crochet accessories that bring beauty, joy, and creativity to everyday life. Each piece is gently stitch-crafted by hand with slow-fashion patience.
+          </p>
+          <div class="hero-actions">
+            <a href="shop.html" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-basket-shopping"></i> Shop Now
+            </a>
+            <a href="#categories" class="btn btn-secondary btn-lg">
+              Explore Categories <i class="fa-solid fa-arrow-down"></i>
+            </a>
+          </div>
+          <!-- Trust Indicators -->
+          <div class="hero-trust-bar">
+            <div class="trust-item">
+              <i class="fa-solid fa-seedling"></i>
+              <span>100% Milk Cotton</span>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-shield-heart"></i>
+              <span>Hypoallergenic</span>
+            </div>
+            <div class="trust-item">
+              <i class="fa-solid fa-truck-fast"></i>
+              <span>Cash on Delivery</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Hero Media Image Card -->
+        <div class="hero-media-wrapper">
+          <div class="hero-image-card">
+            <img src="images/hero/hero-banner.jpg" alt="Crochet and Co. Handmade Collection Flatlay">
+          </div>
+
+          <!-- Floating Badges -->
+          <div class="floating-badge badge-top">
+            <div class="badge-icon"><i class="fa-solid fa-gem"></i></div>
+            <div class="badge-text">
+              <h5>Artisan Quality</h5>
+              <p>Stitched stitch-by-stitch</p>
+            </div>
+          </div>
+
+          <div class="floating-badge badge-bottom">
+            <div class="badge-icon"><i class="fa-solid fa-face-smile"></i></div>
+            <div class="badge-text">
+              <h5>500+ Happy Smiles</h5>
+              <p>Loved all over Pakistan</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Section -->
+  <section class="section-padding" id="categories">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-sparkles"></i> Curated Collections</span>
+        <h2 class="section-title">Shop by Category</h2>
+        <p class="section-desc">
+          From cheerful flower charms to vintage lace headbands, browse our five beloved handcrafted collections.
+        </p>
+      </div>
+
+      <div class="categories-grid" id="home-categories-grid">
+        <!-- Rendered with JavaScript & fallback markup -->
+        <a href="shop.html?category=keychains" class="category-card">
+          <div class="category-thumb">
+            <img src="images/categories/category-keychains.jpg" alt="Crochet Keychains">
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-title">Crochet Keychains</h3>
+            <span class="category-count">5 adorable items →</span>
+          </div>
+        </a>
+
+        <a href="shop.html?category=earrings" class="category-card">
+          <div class="category-thumb">
+            <img src="images/categories/category-earrings.jpg" alt="Handmade Earrings">
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-title">Handmade Earrings</h3>
+            <span class="category-count">5 featherlight pairs →</span>
+          </div>
+        </a>
+
+        <a href="shop.html?category=pouches" class="category-card">
+          <div class="category-thumb">
+            <img src="images/categories/category-pouches.jpg" alt="Crochet Mini Pouches">
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-title">Crochet Mini Pouches</h3>
+            <span class="category-count">5 vintage pouches →</span>
+          </div>
+        </a>
+
+        <a href="shop.html?category=hairbands" class="category-card">
+          <div class="category-thumb">
+            <img src="images/categories/category-hairbands.jpg" alt="Crochet Hairbands">
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-title">Crochet Hairbands</h3>
+            <span class="category-count">5 cottagecore wraps →</span>
+          </div>
+        </a>
+
+        <a href="shop.html?category=hair-clips" class="category-card">
+          <div class="category-thumb">
+            <img src="images/categories/category-hairclips.jpg" alt="Handmade Hair Clips">
+            <div class="category-overlay"></div>
+          </div>
+          <div class="category-info">
+            <h3 class="category-title">Handmade Hair Clips</h3>
+            <span class="category-count">5 dainty clips →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Products Section -->
+  <section class="section-padding" style="background-color: #FFFFFF; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-heart"></i> Handpicked for You</span>
+        <h2 class="section-title">Featured Creations</h2>
+        <p class="section-desc">
+          Our eight most cherished crochet treasures, designed to add whimsical charm to your daily outfits.
+        </p>
+      </div>
+
+      <div class="products-grid" id="featured-products-container">
+        <!-- Rendered via JavaScript from products.js -->
+      </div>
+
+      <div class="text-center" style="margin-top: 3.5rem;">
+        <a href="shop.html" class="btn btn-secondary btn-lg">
+          View All 25+ Products <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Best Sellers Carousel / Grid -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-crown"></i> Community Favorites</span>
+        <h2 class="section-title">Best Sellers</h2>
+        <p class="section-desc">
+          The pieces our customers keep falling in love with again and again.
+        </p>
+      </div>
+
+      <div class="products-grid" id="best-sellers-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Why Choose Handmade? Section -->
+  <section class="section-padding features-section">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-hand-sparkles"></i> The Handmade Promise</span>
+        <h2 class="section-title">Why Choose Handmade?</h2>
+        <p class="section-desc">
+          Unlike mass factory-produced plastic accessories, each Crochet & Co. piece is crafted intentionally with soul and sustainable fibers.
+        </p>
+      </div>
+
+      <div class="features-grid">
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-hands-holding-heart"></i>
+          </div>
+          <h4>100% Handcrafted</h4>
+          <p>Every single loop, knot, and petal is crocheted by passionate women artisans with gentle precision.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-feather"></i>
+          </div>
+          <h4>Pure Milk Cotton</h4>
+          <p>We use combed milk cotton yarn that feels cloud-soft, never scratches, and stays vibrant for years.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-shield-virus"></i>
+          </div>
+          <h4>Hypoallergenic & Safe</h4>
+          <p>Fitted with nickel-free stainless steel hooks and anti-tarnish hardware suitable for sensitive skin.</p>
+        </div>
+
+        <div class="feature-box">
+          <div class="feature-icon-wrapper">
+            <i class="fa-solid fa-gift"></i>
+          </div>
+          <h4>Gift-Ready Packaging</h4>
+          <p>Every order arrives in charming pastel tissue wrap with a handwritten thank-you note and care tips.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Our Story Teaser Section -->
+  <section class="section-padding story-section">
+    <div class="container">
+      <div class="story-grid">
+        <div class="story-images">
+          <div class="story-img-main">
+            <img src="images/product-images/about-story.jpg" alt="Artisan crocheting with pastel yarn">
+          </div>
+          <div class="story-card-overlay">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Slow Made with Patience & Love in Pakistan</div>
+          </div>
+        </div>
+
+        <div class="story-content">
+          <span class="section-tag"><i class="fa-solid fa-yarn"></i> Behind The Yarn</span>
+          <h2>A Small Dream Stitched One Loop at a Time</h2>
+          <p>
+            Crochet & Co. started from a warm bedroom corner in Lahore with a single wooden crochet hook, three pastel skeins of milk cotton yarn, and a deep love for tactile, slow craftsmanship.
+          </p>
+          <p>
+            In a world filled with fast fashion and disposable items, our mission is to bring back tenderness and meaning. When you wear our floral earrings or clip on our strawberry charm, you carry a piece of art that was made with patient hands and heartfelt care.
+          </p>
+
+          <div class="story-perks">
+            <div class="story-perk-item"><i class="fa-solid fa-check-circle"></i> Sustainable Eco-Friendly Yarns</div>
+            <div class="story-perk-item"><i class="fa-solid fa-check-circle"></i> Slow-Fashion Philosophy</div>
+            <div class="story-perk-item"><i class="fa-solid fa-check-circle"></i> Custom Color Requests</div>
+            <div class="story-perk-item"><i class="fa-solid fa-check-circle"></i> Empowering Local Artisans</div>
+          </div>
+
+          <a href="about.html" class="btn btn-primary">
+            Read Our Full Story <i class="fa-solid fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- New Arrivals Grid -->
+  <section class="section-padding" style="background-color: #FFFFFF; border-top: 1px solid var(--color-border); border-bottom: 1px solid var(--color-border);">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-sparkles"></i> Fresh Off the Hook</span>
+        <h2 class="section-title">New Arrivals</h2>
+        <p class="section-desc">
+          Discover our newest seasonal releases, freshly finished and ready to find a loving home.
+        </p>
+      </div>
+
+      <div class="products-grid" id="new-arrivals-container">
+        <!-- Rendered dynamically -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Customer Reviews Section -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag"><i class="fa-solid fa-comment-dots"></i> Client Love</span>
+        <h2 class="section-title">What Our Customers Say</h2>
+        <p class="section-desc">
+          Honest feedback from crochet enthusiasts and sweet gift-givers across the country.
+        </p>
+      </div>
+
+      <div class="reviews-grid">
+        <div class="review-card">
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "The Daisy Bloom Keychain is even cuter in person! The milk cotton yarn is so dense and soft, and the gold clasp feels very premium. It arrived in lovely pastel packaging with a handwritten card. Truly handmade perfection!"
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">M</div>
+            <div class="reviewer-info">
+              <h5>Mahnoor Tariq</h5>
+              <p>Lahore • Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "I ordered the Vintage Rose Kiss-Lock Coin Purse and the Floral Dangle Earrings. The earrings are so lightweight my sensitive ears had zero reaction! The purse lining is neat and holds my lipstick and keys smoothly. 10/10 recommend!"
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">A</div>
+            <div class="reviewer-info">
+              <h5>Ayesha Siddiqua</h5>
+              <p>Karachi • Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="review-card">
+          <div class="review-quote-icon"><i class="fa-solid fa-quote-left"></i></div>
+          <div class="review-stars">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <p class="review-text">
+            "The crochet bandana and hair clips are absolute cottagecore dreams. My little sister adored her birthday gift! Fast delivery across Pakistan and the Cash on Delivery process was seamless."
+          </p>
+          <div class="reviewer-meta">
+            <div class="reviewer-avatar">Z</div>
+            <div class="reviewer-info">
+              <h5>Zainab Fatima</h5>
+              <p>Islamabad • Verified Buyer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter Section -->
+  <section class="section-padding" style="padding-top: 0;">
+    <div class="container">
+      <div class="newsletter-card">
+        <span class="section-tag" style="background: rgba(255, 255, 255, 0.7);"><i class="fa-solid fa-envelope-open-text"></i> Join the Crochet Family</span>
+        <h3>Get 10% Off Your First Handmade Order</h3>
+        <p>Subscribe for exclusive previews of new crochet drops, pastel inspiration, and VIP coupon codes.</p>
+        
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" class="newsletter-input" placeholder="Enter your email address..." required aria-label="Email address">
+          <button type="submit" class="btn btn-primary">
+            Join Club <i class="fa-solid fa-paper-plane"></i>
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Instagram Photo Gallery -->
+  <section class="instagram-section">
+    <div class="container">
+      <div class="instagram-banner">
+        <span class="section-tag"><i class="fa-brands fa-instagram"></i> Follow Along</span>
+        <div class="handle">@crochetandco.pk</div>
+        <p style="color: var(--color-text-muted); font-size: 0.95rem; margin-top: 0.3rem;">Tag us in your photos to get featured on our story!</p>
+      </div>
+    </div>
+
+    <div class="instagram-grid">
+      <div class="instagram-item">
+        <img src="images/product-images/keychain-daisy.jpg" alt="Crochet Instagram post 1">
+        <div class="instagram-overlay"><i class="fa-solid fa-heart"></i></div>
+      </div>
+      <div class="instagram-item">
+        <img src="images/product-images/pouch-granny-square.jpg" alt="Crochet Instagram post 2">
+        <div class="instagram-overlay"><i class="fa-solid fa-heart"></i></div>
+      </div>
+      <div class="instagram-item">
+        <img src="images/product-images/hairband-sage-floral.jpg" alt="Crochet Instagram post 3">
+        <div class="instagram-overlay"><i class="fa-solid fa-heart"></i></div>
+      </div>
+      <div class="instagram-item">
+        <img src="images/product-images/earrings-floral.jpg" alt="Crochet Instagram post 4">
+        <div class="instagram-overlay"><i class="fa-solid fa-heart"></i></div>
+      </div>
+      <div class="instagram-item">
+        <img src="images/product-images/hairclips-floral-set.jpg" alt="Crochet Instagram post 5">
+        <div class="instagram-overlay"><i class="fa-solid fa-heart"></i></div>
+      </div>
+      <div class="instagram-item">
+        <img src="images/product-images/pouch-tulip.jpg" alt="Crochet Instagram post 6">
+        <div class="instagram-overlay"><i class="fa-solid fa-heart"></i></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Elegant Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <!-- Col 1: Brand & Bio -->
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <span>Crochet <span class="amp">&</span> Co.</span>
+          </a>
+          <p class="footer-bio">
+            A premium pastel boutique for handmade crochet accessories. Stitched stitch-by-stitch with soft milk cotton yarn, heartfelt patience, and love.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://pinterest.com" target="_blank" class="social-btn" aria-label="Pinterest"><i class="fa-brands fa-pinterest-p"></i></a>
+            <a href="https://wa.me/923001234567" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <!-- Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop All Products</a>
+            <a href="categories.html">Categories</a>
+            <a href="wishlist.html">My Wishlist</a>
+            <a href="cart.html">View Cart</a>
+          </div>
+        </div>
+
+        <!-- Col 3: Categories -->
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <div class="footer-links">
+            <a href="shop.html?category=keychains">Crochet Keychains</a>
+            <a href="shop.html?category=earrings">Handmade Earrings</a>
+            <a href="shop.html?category=pouches">Crochet Mini Pouches</a>
+            <a href="shop.html?category=hairbands">Crochet Hairbands</a>
+            <a href="shop.html?category=hair-clips">Handmade Hair Clips</a>
+          </div>
+        </div>
+
+        <!-- Col 4: Customer Care & Info -->
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-location-dot"></i>
+            <span>Gulberg III, Lahore, Punjab, Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+92 300 1234567 (Mon-Sat, 10am-7pm)</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hello@crochetandco.pk</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-truck"></i>
+            <span>Standard Delivery: 3-5 Business Days</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bottom Bar -->
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>
+          © 2026 <strong>Crochet & Co.</strong> All rights reserved. Handcrafted with love in Pakistan.
+        </div>
+        <div class="payment-badges">
+          <span class="payment-tag"><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</span>
+          <span class="payment-tag"><i class="fa-solid fa-building-columns"></i> Bank Transfer</span>
+          <span class="payment-tag"><i class="fa-solid fa-wallet"></i> JazzCash / EasyPaisa</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // Homepage Dynamic Populators
+    document.addEventListener('DOMContentLoaded', () => {
+      // 1. Featured Products (first 8 featured)
+      const featuredContainer = document.getElementById('featured-products-container');
+      if (featuredContainer) {
+        const featured = PRODUCTS.filter(p => p.isFeatured).slice(0, 8);
+        featuredContainer.innerHTML = featured.map(createProductCardHTML).join('');
+      }
+
+      // 2. Best Sellers (4 top rated / best seller items)
+      const bestSellersContainer = document.getElementById('best-sellers-container');
+      if (bestSellersContainer) {
+        const bestSellers = PRODUCTS.filter(p => p.isBestSeller).slice(0, 4);
+        bestSellersContainer.innerHTML = bestSellers.map(createProductCardHTML).join('');
+      }
+
+      // 3. New Arrivals (4 fresh items)
+      const newArrivalsContainer = document.getElementById('new-arrivals-container');
+      if (newArrivalsContainer) {
+        const newArrivals = PRODUCTS.filter(p => p.isNewArrival).slice(0, 4);
+        newArrivalsContainer.innerHTML = newArrivals.map(createProductCardHTML).join('');
+      }
+
+      // Re-trigger scroll observer for dynamically loaded cards
+      if (typeof initScrollObserver === 'function') {
+        initScrollObserver();
+      }
+    });
+  </script>
+</body>
+</html>

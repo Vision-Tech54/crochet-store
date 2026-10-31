@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shop All Products | Crochet & Co. Handmade Boutique</title>
+  <meta name="description" content="Explore our full collection of handmade crochet keychains, earrings, mini pouches, hairbands, and hair clips. Filter and sort by category and price.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar" aria-label="Announcement">
+    ✨ Free Delivery across Pakistan on orders over Rs. 3,000 | 100% Milk Cotton Handcrafted ♡
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span>Crochet <span class="amp">&</span> Co.</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link active">Shop</a>
+        <a href="categories.html" class="nav-link">Categories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-btn" onclick="openSearchModal()" title="Search Products" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <a href="wishlist.html" class="nav-btn" title="View Wishlist" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="nav-counter wishlist-counter" style="display: none;">0</span>
+        </a>
+        <a href="cart.html" class="nav-btn" title="Shopping Cart" aria-label="Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="nav-counter cart-counter" style="display: none;">0</span>
+        </a>
+        <button type="button" class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" style="font-size: 1.35rem;">
+        <span class="logo-icon" style="width: 32px; height: 32px; font-size: 0.9rem;"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span>Crochet <span class="amp">&</span> Co.</span>
+      </a>
+      <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="shop.html" class="mobile-nav-link active">Shop Collection <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="categories.html" class="mobile-nav-link">Browse Categories <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="wishlist.html" class="mobile-nav-link">My Wishlist <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="cart.html" class="mobile-nav-link">Shopping Cart <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="about.html" class="mobile-nav-link">Our Story <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & FAQ <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+    </div>
+    <div class="drawer-footer">
+      <p><i class="fa-solid fa-phone" style="color: var(--color-pink-dark); margin-right: 0.4rem;"></i> WhatsApp: +92 300 1234567</p>
+      <p><i class="fa-solid fa-location-dot" style="color: var(--color-pink-dark); margin-right: 0.4rem;"></i> Lahore, Pakistan</p>
+    </div>
+  </aside>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="section-tag"><i class="fa-solid fa-sparkles"></i> Complete Catalog</span>
+      <h1 class="page-title">Handmade Accessories</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="current">Shop</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Shop Content -->
+  <section class="section-padding">
+    <div class="container">
+      <div class="shop-layout">
+        <!-- Sidebar Filters -->
+        <aside class="shop-sidebar" aria-label="Filters">
+          <!-- Search Block -->
+          <div class="filter-block">
+            <h4 class="filter-title">Search</h4>
+            <div class="filter-search-box">
+              <input type="text" id="shop-search-input" class="filter-search-input" placeholder="Search accessories...">
+              <button type="button" class="filter-search-btn" id="shop-search-clear" style="display: none;" title="Clear search">
+                <i class="fa-solid fa-xmark"></i>
+              </button>
+            </div>
+          </div>
+
+          <!-- Category Filter Block -->
+          <div class="filter-block">
+            <h4 class="filter-title">Categories</h4>
+            <div class="category-filter-list" id="category-filter-group">
+              <button type="button" class="category-filter-btn active" data-category="all">
+                <span>All Collections</span>
+                <span class="cat-badge" id="cat-count-all">25</span>
+              </button>
+              <button type="button" class="category-filter-btn" data-category="keychains">
+                <span>Crochet Keychains</span>
+                <span class="cat-badge">5</span>
+              </button>
+              <button type="button" class="category-filter-btn" data-category="earrings">
+                <span>Handmade Earrings</span>
+                <span class="cat-badge">5</span>
+              </button>
+              <button type="button" class="category-filter-btn" data-category="pouches">
+                <span>Crochet Mini Pouches</span>
+                <span class="cat-badge">5</span>
+              </button>
+              <button type="button" class="category-filter-btn" data-category="hairbands">
+                <span>Crochet Hairbands</span>
+                <span class="cat-badge">5</span>
+              </button>
+              <button type="button" class="category-filter-btn" data-category="hair-clips">
+                <span>Handmade Hair Clips</span>
+                <span class="cat-badge">5</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Price Filter Block -->
+          <div class="filter-block">
+            <h4 class="filter-title">Max Price</h4>
+            <div class="price-slider-wrapper">
+              <input type="range" id="price-range" class="price-range-input" min="400" max="2200" step="50" value="2200">
+              <div class="price-range-labels">
+                <span>Rs. 400</span>
+                <span id="price-range-display" style="font-weight: 700; color: var(--color-pink-dark);">Rs. 2,200</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Filter Reset -->
+          <button type="button" class="btn btn-secondary btn-sm btn-clear-filters" id="btn-reset-filters">
+            <i class="fa-solid fa-rotate-left"></i> Reset All Filters
+          </button>
+        </aside>
+
+        <!-- Product Grid & Controls -->
+        <main>
+          <!-- Controls Bar -->
+          <div class="shop-controls">
+            <div class="results-count" id="shop-results-count">
+              Showing <strong>25</strong> creations
+            </div>
+
+            <!-- Sort Dropdown -->
+            <div class="shop-sort-wrapper">
+              <label for="shop-sort-select">Sort by:</label>
+              <select id="shop-sort-select" class="shop-sort-select">
+                <option value="featured">Featured</option>
+                <option value="price-asc">Price: Low to High</option>
+                <option value="price-desc">Price: High to Low</option>
+                <option value="name-asc">Name: A to Z</option>
+                <option value="name-desc">Name: Z to A</option>
+                <option value="rating">Highest Rated</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Active Filter Pills -->
+          <div id="active-filter-pills" style="display: flex; gap: 0.5rem; flex-wrap: wrap; margin-bottom: 1.5rem;"></div>
+
+          <!-- Products Grid Container -->
+          <div class="products-grid" id="shop-products-grid">
+            <!-- Rendered by JavaScript -->
+          </div>
+
+          <!-- Empty State -->
+          <div class="empty-state" id="shop-empty-state" style="display: none;">
+            <div class="empty-state-icon">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <h3>No Creations Found</h3>
+            <p>We couldn't find any crochet accessories matching your active filter criteria.</p>
+            <button type="button" class="btn btn-primary" onclick="resetFilters()">
+              Clear Filters
+            </button>
+          </div>
+        </main>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <span>Crochet <span class="amp">&</span> Co.</span>
+          </a>
+          <p class="footer-bio">
+            A premium pastel boutique for handmade crochet accessories. Stitched stitch-by-stitch with soft milk cotton yarn and love.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/923001234567" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop All Products</a>
+            <a href="categories.html">Categories</a>
+            <a href="wishlist.html">My Wishlist</a>
+            <a href="cart.html">View Cart</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <div class="footer-links">
+            <a href="shop.html?category=keychains">Crochet Keychains</a>
+            <a href="shop.html?category=earrings">Handmade Earrings</a>
+            <a href="shop.html?category=pouches">Crochet Mini Pouches</a>
+            <a href="shop.html?category=hairbands">Crochet Hairbands</a>
+            <a href="shop.html?category=hair-clips">Handmade Hair Clips</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-truck"></i>
+            <span>Delivery: 3-5 Business Days across Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-hand-holding-heart"></i>
+            <span>Cash on Delivery Available</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>+92 300 1234567</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© 2026 <strong>Crochet & Co.</strong> All rights reserved. Handcrafted with love.</div>
+        <div class="payment-badges">
+          <span class="payment-tag"><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</span>
+          <span class="payment-tag"><i class="fa-solid fa-shield-halved"></i> 100% Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    // State
+    let currentCategory = 'all';
+    let currentMaxPrice = 2200;
+    let currentSearchTerm = '';
+    let currentSort = 'featured';
+
+    document.addEventListener('DOMContentLoaded', () => {
+      // Parse URL parameters
+      const params = new URLSearchParams(window.location.search);
+      const urlCategory = params.get('category');
+      const urlSearch = params.get('search');
+
+      if (urlCategory) {
+        currentCategory = urlCategory.toLowerCase();
+      }
+
+      if (urlSearch) {
+        currentSearchTerm = urlSearch;
+        const searchInput = document.getElementById('shop-search-input');
+        if (searchInput) searchInput.value = urlSearch;
+      }
+
+      // Update total count
+      const totalCountEl = document.getElementById('cat-count-all');
+      if (totalCountEl) totalCountEl.textContent = PRODUCTS.length;
+
+      setupFilterListeners();
+      applyFiltersAndSort();
+    });
+
+    function setupFilterListeners() {
+      // Category buttons
+      const catBtns = document.querySelectorAll('.category-filter-btn');
+      catBtns.forEach(btn => {
+        const cat = btn.getAttribute('data-category');
+        if (cat === currentCategory) {
+          catBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+        }
+        btn.addEventListener('click', () => {
+          catBtns.forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          currentCategory = cat;
+          applyFiltersAndSort();
+        });
+      });
+
+      // Price slider
+      const priceSlider = document.getElementById('price-range');
+      const priceDisplay = document.getElementById('price-range-display');
+      priceSlider.addEventListener('input', (e) => {
+        currentMaxPrice = parseInt(e.target.value, 10);
+        priceDisplay.textContent = formatPrice(currentMaxPrice);
+        applyFiltersAndSort();
+      });
+
+      // Search input
+      const searchInput = document.getElementById('shop-search-input');
+      const searchClear = document.getElementById('shop-search-clear');
+      searchInput.addEventListener('input', (e) => {
+        currentSearchTerm = e.target.value.trim();
+        searchClear.style.display = currentSearchTerm ? 'block' : 'none';
+        applyFiltersAndSort();
+      });
+
+      searchClear.addEventListener('click', () => {
+        searchInput.value = '';
+        currentSearchTerm = '';
+        searchClear.style.display = 'none';
+        applyFiltersAndSort();
+      });
+
+      // Sort select
+      const sortSelect = document.getElementById('shop-sort-select');
+      sortSelect.addEventListener('change', (e) => {
+        currentSort = e.target.value;
+        applyFiltersAndSort();
+      });
+
+      // Reset button
+      const resetBtn = document.getElementById('btn-reset-filters');
+      resetBtn.addEventListener('click', resetFilters);
+    }
+
+    function resetFilters() {
+      currentCategory = 'all';
+      currentMaxPrice = 2200;
+      currentSearchTerm = '';
+      currentSort = 'featured';
+
+      document.querySelectorAll('.category-filter-btn').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-category') === 'all');
+      });
+
+      const priceSlider = document.getElementById('price-range');
+      const priceDisplay = document.getElementById('price-range-display');
+      priceSlider.value = 2200;
+      priceDisplay.textContent = formatPrice(2200);
+
+      const searchInput = document.getElementById('shop-search-input');
+      const searchClear = document.getElementById('shop-search-clear');
+      searchInput.value = '';
+      searchClear.style.display = 'none';
+
+      document.getElementById('shop-sort-select').value = 'featured';
+
+      applyFiltersAndSort();
+    }
+
+    function applyFiltersAndSort() {
+      let filtered = [...PRODUCTS];
+
+      // Category filter
+      if (currentCategory && currentCategory !== 'all') {
+        filtered = filtered.filter(p => p.category.toLowerCase() === currentCategory);
+      }
+
+      // Max price filter
+      filtered = filtered.filter(p => p.price <= currentMaxPrice);
+
+      // Search filter
+      if (currentSearchTerm) {
+        const query = currentSearchTerm.toLowerCase();
+        filtered = filtered.filter(p => 
+          p.name.toLowerCase().includes(query) ||
+          p.categoryName.toLowerCase().includes(query) ||
+          p.shortDesc.toLowerCase().includes(query)
+        );
+      }
+
+      // Sorting
+      if (currentSort === 'price-asc') {
+        filtered.sort((a, b) => a.price - b.price);
+      } else if (currentSort === 'price-desc') {
+        filtered.sort((a, b) => b.price - a.price);
+      } else if (currentSort === 'name-asc') {
+        filtered.sort((a, b) => a.name.localeCompare(b.name));
+      } else if (currentSort === 'name-desc') {
+        filtered.sort((a, b) => b.name.localeCompare(a.name));
+      } else if (currentSort === 'rating') {
+        filtered.sort((a, b) => b.rating - a.rating);
+      }
+
+      renderProducts(filtered);
+    }
+
+    function renderProducts(items) {
+      const container = document.getElementById('shop-products-grid');
+      const countEl = document.getElementById('shop-results-count');
+      const emptyState = document.getElementById('shop-empty-state');
+
+      countEl.innerHTML = `Showing <strong>${items.length}</strong> creations`;
+
+      if (items.length === 0) {
+        container.style.display = 'none';
+        emptyState.style.display = 'block';
+      } else {
+        container.style.display = 'grid';
+        emptyState.style.display = 'none';
+        container.innerHTML = items.map(createProductCardHTML).join('');
+      }
+
+      // Re-trigger observer for fade-in animations
+      if (typeof initScrollObserver === 'function') {
+        initScrollObserver();
+      }
+    }
+  </script>
+</body>
+</html>

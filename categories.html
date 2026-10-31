@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Collections | Crochet & Co. Handmade Boutique</title>
+  <meta name="description" content="Explore our five signature handmade crochet collections: Keychains, Earrings, Mini Pouches, Hairbands, and Hair Clips.">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <aside class="top-bar" aria-label="Announcement">
+    ✨ Free Delivery across Pakistan on orders over Rs. 3,000 | 100% Milk Cotton Handcrafted ♡
+  </aside>
+
+  <!-- Navigation Bar -->
+  <header class="site-header">
+    <div class="container nav-container">
+      <a href="index.html" class="brand-logo">
+        <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span>Crochet <span class="amp">&</span> Co.</span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="shop.html" class="nav-link">Shop</a>
+        <a href="categories.html" class="nav-link active">Categories</a>
+        <a href="about.html" class="nav-link">About</a>
+        <a href="contact.html" class="nav-link">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-btn" onclick="openSearchModal()" title="Search Products" aria-label="Search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <a href="wishlist.html" class="nav-btn" title="View Wishlist" aria-label="Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="nav-counter wishlist-counter" style="display: none;">0</span>
+        </a>
+        <a href="cart.html" class="nav-btn" title="Shopping Cart" aria-label="Cart">
+          <i class="fa-solid fa-basket-shopping"></i>
+          <span class="nav-counter cart-counter" style="display: none;">0</span>
+        </a>
+        <button type="button" class="menu-toggle" id="mobile-menu-toggle" aria-label="Toggle mobile menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-overlay" id="mobile-overlay"></div>
+  <aside class="mobile-drawer" id="mobile-drawer" aria-label="Mobile Navigation">
+    <div class="drawer-header">
+      <a href="index.html" class="brand-logo" style="font-size: 1.35rem;">
+        <span class="logo-icon" style="width: 32px; height: 32px; font-size: 0.9rem;"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+        <span>Crochet <span class="amp">&</span> Co.</span>
+      </a>
+      <button type="button" class="drawer-close" id="drawer-close" aria-label="Close menu">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+    <div class="mobile-nav-links">
+      <a href="index.html" class="mobile-nav-link">Home <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="shop.html" class="mobile-nav-link">Shop Collection <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="categories.html" class="mobile-nav-link active">Browse Categories <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="wishlist.html" class="mobile-nav-link">My Wishlist <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="cart.html" class="mobile-nav-link">Shopping Cart <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="about.html" class="mobile-nav-link">Our Story <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+      <a href="contact.html" class="mobile-nav-link">Contact & FAQ <i class="fa-solid fa-chevron-right" style="font-size: 0.8rem;"></i></a>
+    </div>
+    <div class="drawer-footer">
+      <p><i class="fa-solid fa-phone" style="color: var(--color-pink-dark); margin-right: 0.4rem;"></i> WhatsApp: +92 300 1234567</p>
+      <p><i class="fa-solid fa-location-dot" style="color: var(--color-pink-dark); margin-right: 0.4rem;"></i> Lahore, Pakistan</p>
+    </div>
+  </aside>
+
+  <!-- Page Banner -->
+  <section class="page-banner">
+    <div class="container">
+      <span class="section-tag"><i class="fa-solid fa-layer-group"></i> Signature Handcrafts</span>
+      <h1 class="page-title">Curated Categories</h1>
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a>
+        <span>/</span>
+        <span class="current">Categories</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Categories Showcase List -->
+  <section class="section-padding">
+    <div class="container">
+      <div style="display: flex; flex-direction: column; gap: 4rem;">
+        
+        <!-- Category 1: Keychains -->
+        <div class="category-showcase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; background: #FFFFFF; border-radius: var(--radius-xl); padding: 2.5rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; height: 380px; box-shadow: var(--shadow-card);">
+            <img src="images/categories/category-keychains.jpg" alt="Crochet Keychains" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-key"></i> Collection 01</span>
+            <h2 style="font-size: 2.3rem; margin-bottom: 0.8rem;">Crochet Keychains</h2>
+            <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+              Pocket-sized happiness! Our signature keychain collection features pillowy amigurumi strawberries, sunny blooming daisies, sweet teddy bears, and lucky four-leaf clovers. Each charm is fitted with an anti-tarnish gold-plated lobster swivel clasp.
+            </p>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="shop.html?category=keychains" class="btn btn-primary">
+                Shop Keychains (5 Items) <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span style="font-size: 0.9rem; color: var(--color-text-muted);">From Rs. 520</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 2: Earrings -->
+        <div class="category-showcase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; background: #FFFFFF; border-radius: var(--radius-xl); padding: 2.5rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);">
+          <div style="order: 2; border-radius: var(--radius-lg); overflow: hidden; height: 380px; box-shadow: var(--shadow-card);">
+            <img src="images/categories/category-earrings.jpg" alt="Handmade Earrings" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="order: 1;">
+            <span class="section-tag"><i class="fa-solid fa-gem"></i> Collection 02</span>
+            <h2 style="font-size: 2.3rem; margin-bottom: 0.8rem;">Handmade Earrings</h2>
+            <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+              Say goodbye to heavy, painful earrings. Crocheted using ultra-fine micro cotton thread, each pair weighs less than 4 grams! Mounted exclusively on hypoallergenic, nickel-free surgical steel and 18K gold-plated French hooks.
+            </p>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="shop.html?category=earrings" class="btn btn-primary">
+                Shop Earrings (5 Pairs) <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span style="font-size: 0.9rem; color: var(--color-text-muted);">From Rs. 750</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 3: Mini Pouches -->
+        <div class="category-showcase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; background: #FFFFFF; border-radius: var(--radius-xl); padding: 2.5rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; height: 380px; box-shadow: var(--shadow-card);">
+            <img src="images/categories/category-pouches.jpg" alt="Crochet Mini Pouches" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-purse"></i> Collection 03</span>
+            <h2 style="font-size: 2.3rem; margin-bottom: 0.8rem;">Crochet Mini Pouches</h2>
+            <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+              Inspired by vintage Edwardian kiss-lock coin purses and blooming cottagecore tulip pouches. Perfect for keeping lip oils, emergency hair pins, credit cards, coins, and AirPods safely tucked inside your tote. Fully lined with cotton twill.
+            </p>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="shop.html?category=pouches" class="btn btn-primary">
+                Shop Mini Pouches (5 Items) <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span style="font-size: 0.9rem; color: var(--color-text-muted);">From Rs. 990</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 4: Hairbands -->
+        <div class="category-showcase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; background: #FFFFFF; border-radius: var(--radius-xl); padding: 2.5rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);">
+          <div style="order: 2; border-radius: var(--radius-lg); overflow: hidden; height: 380px; box-shadow: var(--shadow-card);">
+            <img src="images/categories/category-hairbands.jpg" alt="Crochet Hairbands" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div style="order: 1;">
+            <span class="section-tag"><i class="fa-solid fa-ribbon"></i> Collection 04</span>
+            <h2 style="font-size: 2.3rem; margin-bottom: 0.8rem;">Crochet Hairbands</h2>
+            <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+              Turn every day into a soft fairytale. From hand-tied daisy mesh bandanas to wide pastel floral headbands and chunky ribbed wraps that keep your hair stylishly framed without any pinching or headache.
+            </p>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="shop.html?category=hairbands" class="btn btn-primary">
+                Shop Hairbands (5 Items) <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span style="font-size: 0.9rem; color: var(--color-text-muted);">From Rs. 880</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Category 5: Hair Clips -->
+        <div class="category-showcase-row fade-in-section" style="display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; background: #FFFFFF; border-radius: var(--radius-xl); padding: 2.5rem; border: 1px solid var(--color-border); box-shadow: var(--shadow-subtle);">
+          <div style="border-radius: var(--radius-lg); overflow: hidden; height: 380px; box-shadow: var(--shadow-card);">
+            <img src="images/categories/category-hairclips.jpg" alt="Handmade Hair Clips" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;" onmouseover="this.style.transform='scale(1.08)'" onmouseout="this.style.transform='scale(1)'">
+          </div>
+          <div>
+            <span class="section-tag"><i class="fa-solid fa-wand-magic-sparkles"></i> Collection 05</span>
+            <h2 style="font-size: 2.3rem; margin-bottom: 0.8rem;">Handmade Hair Clips</h2>
+            <p style="color: var(--color-text-muted); line-height: 1.8; margin-bottom: 1.5rem;">
+              Delicate, playful, and functional! Miniature daisies, strawberry blossoms, 3D pastel butterflies, and fluffy bouclé cloud barrettes fitted onto teeth-grip alligator clips that hold thick or fine hair firmly in place.
+            </p>
+            <div style="display: flex; gap: 1rem; align-items: center; flex-wrap: wrap;">
+              <a href="shop.html?category=hair-clips" class="btn btn-primary">
+                Shop Hair Clips (5 Sets) <i class="fa-solid fa-arrow-right"></i>
+              </a>
+              <span style="font-size: 0.9rem; color: var(--color-text-muted);">From Rs. 480</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <a href="index.html" class="brand-logo" style="margin-bottom: 1rem;">
+            <span class="logo-icon"><i class="fa-solid fa-wand-magic-sparkles"></i></span>
+            <span>Crochet <span class="amp">&</span> Co.</span>
+          </a>
+          <p class="footer-bio">
+            A premium pastel boutique for handmade crochet accessories. Stitched stitch-by-stitch with soft milk cotton yarn and love.
+          </p>
+          <div class="social-links">
+            <a href="https://instagram.com" target="_blank" class="social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://facebook.com" target="_blank" class="social-btn" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://wa.me/923001234567" target="_blank" class="social-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Explore</h4>
+          <div class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="shop.html">Shop All Products</a>
+            <a href="categories.html">Categories</a>
+            <a href="wishlist.html">My Wishlist</a>
+            <a href="cart.html">View Cart</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Collections</h4>
+          <div class="footer-links">
+            <a href="shop.html?category=keychains">Crochet Keychains</a>
+            <a href="shop.html?category=earrings">Handmade Earrings</a>
+            <a href="shop.html?category=pouches">Crochet Mini Pouches</a>
+            <a href="shop.html?category=hairbands">Crochet Hairbands</a>
+            <a href="shop.html?category=hair-clips">Handmade Hair Clips</a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Customer Care</h4>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-truck"></i>
+            <span>Delivery: 3-5 Business Days across Pakistan</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-shield-heart"></i>
+            <span>100% Pure Milk Cotton</span>
+          </div>
+          <div class="footer-contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <span>hello@crochetandco.pk</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <div>© 2026 <strong>Crochet & Co.</strong> All rights reserved. Handcrafted with love in Pakistan.</div>
+        <div class="payment-badges">
+          <span class="payment-tag"><i class="fa-solid fa-money-bill-wave"></i> Cash on Delivery</span>
+          <span class="payment-tag"><i class="fa-solid fa-shield-halved"></i> 100% Satisfaction</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/products.js"></script>
+  <script src="js/cart.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>
