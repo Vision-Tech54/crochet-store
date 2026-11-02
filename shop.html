@@ -114,7 +114,7 @@
             <div class="category-filter-list" id="category-filter-group">
               <button type="button" class="category-filter-btn active" data-category="all">
                 <span>All Easy Creations</span>
-                <span class="cat-badge" id="cat-count-all">15</span>
+                <span class="cat-badge" id="cat-count-all">16</span>
               </button>
               <button type="button" class="category-filter-btn" data-category="scrunchies">
                 <span>Crochet Scrunchies</span>
@@ -134,7 +134,7 @@
               </button>
               <button type="button" class="category-filter-btn" data-category="hair-clips">
                 <span>Simple Hair Clips</span>
-                <span class="cat-badge">3</span>
+                <span class="cat-badge">4</span>
               </button>
             </div>
           </div>
@@ -300,9 +300,17 @@
         if (searchInput) searchInput.value = urlSearch;
       }
 
-      // Update total count
+      // Update total count and category counts
       const totalCountEl = document.getElementById('cat-count-all');
       if (totalCountEl) totalCountEl.textContent = PRODUCTS.length;
+
+      document.querySelectorAll('.category-filter-btn').forEach(btn => {
+        const cat = btn.getAttribute('data-category');
+        const badge = btn.querySelector('.cat-badge');
+        if (badge && cat && cat !== 'all') {
+          badge.textContent = PRODUCTS.filter(p => p.category === cat).length;
+        }
+      });
 
       setupFilterListeners();
       applyFiltersAndSort();

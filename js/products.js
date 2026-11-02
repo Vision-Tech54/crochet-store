@@ -49,11 +49,11 @@ const CATEGORIES = [
     id: 'hair-clips',
     name: 'Simple Hair Clips',
     slug: 'hair-clips',
-    description: 'Dainty crochet daisies, berries, and pastel butterflies secured onto snag-free golden alligator clips.',
+    description: 'Dainty crochet daisies, coquette bows, blush petals, and lavender blossoms secured onto snag-free golden alligator clips.',
     image: 'images/categories/category-hairclips.jpg',
     fallbackImage: 'images/product-images/hairclips-floral-set.jpg',
     tagline: 'Whimsical Hair Accents',
-    itemCount: 3
+    itemCount: 4
   }
 ];
 
@@ -517,6 +517,36 @@ const PRODUCTS = [
       'images/categories/category-hairclips.jpg'
     ],
     stock: 19
+  },
+  {
+    id: 16,
+    name: 'Coquette Pastel Crochet Bow Hair Clip',
+    slug: 'coquette-pastel-crochet-bow-hair-clip',
+    category: 'hair-clips',
+    categoryName: 'Simple Hair Clips',
+    price: 350,
+    originalPrice: 450,
+    rating: 4.9,
+    reviewsCount: 28,
+    badge: 'Trending',
+    isFeatured: true,
+    isBestSeller: false,
+    isNewArrival: true,
+    shortDesc: 'A dainty handmade pastel pink crochet ribbon bow clip accented with a sweet micro-daisy.',
+    description: 'Sweet, charming, and timelessly coquette! Hand-crocheted using petal-soft 5-ply combed milk cotton yarn, this lightweight ribbon bow is accented with a delicate white daisy blossom at its pinched center and mounted onto a smooth, snag-free gold alligator clip. Perfect for styling side fringe, half-up buns, and braided hairstyles.',
+    materials: '100% Combed Milk Cotton Yarn, 5.5 cm Gold-Tone Alligator Clip',
+    dimensions: 'Bow: 7.0 cm x 5.0 cm | Clip Length: 5.5 cm',
+    care: 'Spot clean gently with a damp cloth and mild soap. Lay flat to dry.',
+    colors: [
+      { name: 'Ballet Blush Pink', hex: '#FADADD' },
+      { name: 'Buttercream Cream', hex: '#FFF9E6' },
+      { name: 'Lavender Mist', hex: '#D6C7E8' }
+    ],
+    images: [
+      'images/product-images/hairclip-bow.jpg',
+      'images/categories/category-hairclips.jpg'
+    ],
+    stock: 22
   }
 ];
 
