@@ -54,6 +54,16 @@ const CATEGORIES = [
     fallbackImage: 'images/product-images/hairclips-floral-set.jpg',
     tagline: 'Whimsical Hair Accents',
     itemCount: 5
+  },
+  {
+    id: 'jewellery',
+    name: 'Aesthetic Jewellery',
+    slug: 'jewellery',
+    description: 'Dreamy cottagecore chokers, micro-crochet rose pendants, flower garden bracelets, and dainty butterfly rings.',
+    image: 'images/categories/category-jewellery.jpg',
+    fallbackImage: 'images/product-images/jewellery-daisy-choker.jpg',
+    tagline: 'Dainty & Dreamy Adornments',
+    itemCount: 5
   }
 ];
 
@@ -811,6 +821,158 @@ const PRODUCTS = [
       'images/categories/category-hairclips.jpg'
     ],
     stock: 15
+  },
+
+  // CATEGORY 6: AESTHETIC JEWELLERY
+  {
+    id: 26,
+    name: 'Pastel Daisy Chain Crochet Choker',
+    slug: 'pastel-daisy-chain-crochet-choker',
+    category: 'jewellery',
+    categoryName: 'Aesthetic Jewellery',
+    price: 890,
+    originalPrice: 1150,
+    rating: 5.0,
+    reviewsCount: 41,
+    badge: 'Trending',
+    isFeatured: true,
+    isBestSeller: false,
+    isNewArrival: true,
+    shortDesc: 'Dainty micro-crochet daisy chain choker with luminous faux pearl centers and an adjustable 14K gold-plated extender chain.',
+    description: 'Elevate your cottagecore look with our handcrafted Daisy Chain Choker. Micro-crocheted petal by petal in delicate pastel cream and blush pink, each daisy is centered with an iridescent faux pearl and connected along a dainty hypoallergenic gold chain.',
+    materials: 'Fine 100% Combed Cotton Thread, Faux Pearl Accents, 14K Gold-Plated Brass Chain & Lobster Clasp',
+    dimensions: 'Choker Length: 33 cm + 7 cm extender chain | Daisy Diameter: 1.6 cm',
+    care: 'Store flat in dry jewelry pouch. Avoid exposure to water, perfume, and cosmetics.',
+    colors: [
+      { name: 'Blush & Ivory Pearl', hex: '#FADADD' },
+      { name: 'Buttercup & Cream', hex: '#FFF4A3' },
+      { name: 'Lavender Breeze', hex: '#D9C6E8' }
+    ],
+    images: [
+      'images/product-images/jewellery-daisy-choker.jpg',
+      'images/categories/category-jewellery.jpg'
+    ],
+    stock: 12
+  },
+  {
+    id: 27,
+    name: 'Vintage Rose Lace Pendant Necklace',
+    slug: 'vintage-rose-lace-pendant-necklace',
+    category: 'jewellery',
+    categoryName: 'Aesthetic Jewellery',
+    price: 950,
+    originalPrice: 1250,
+    rating: 4.9,
+    reviewsCount: 36,
+    badge: 'Customer Love',
+    isFeatured: true,
+    isBestSeller: true,
+    isNewArrival: false,
+    shortDesc: 'A romantic 3D micro-crochet English rose pendant with tiny sage leaves and a genuine freshwater teardrop pearl on gold chain.',
+    description: 'An heirloom-quality piece that captures timeless botanical romance. Each English rose bud is painstakingly micro-crocheted using fine silk-blend cotton threads, paired with tiny hand-stitched sage leaves and a luminous teardrop pearl.',
+    materials: 'Silk Cotton Embroidery Thread, Natural Freshwater Teardrop Pearl, 14K Gold-Filled Fine Cable Chain',
+    dimensions: 'Pendant: 2.2 cm x 2.0 cm | Chain Length: 45 cm + 5 cm extender',
+    care: 'Gently wipe with a soft dry cloth. Keep away from water and direct perfume spray.',
+    colors: [
+      { name: 'Dusty Rose & Gold', hex: '#E29CA7' },
+      { name: 'Antique Cream & Gold', hex: '#FDFBF7' },
+      { name: 'Mauve Blossom', hex: '#B87B8E' }
+    ],
+    images: [
+      'images/product-images/jewellery-rose-pendant.jpg',
+      'images/categories/category-jewellery.jpg'
+    ],
+    stock: 10
+  },
+  {
+    id: 28,
+    name: 'Blossom Garden Micro-Crochet Bracelet',
+    slug: 'blossom-garden-micro-crochet-bracelet',
+    category: 'jewellery',
+    categoryName: 'Aesthetic Jewellery',
+    price: 780,
+    originalPrice: 990,
+    rating: 4.9,
+    reviewsCount: 28,
+    badge: 'Best Seller',
+    isFeatured: true,
+    isBestSeller: true,
+    isNewArrival: true,
+    shortDesc: 'A whimsical wristlet featuring a rainbow garden of pastel micro-blossoms accented with faceted gold spacer beads.',
+    description: 'A delicate pastel flower garden wrapped around your wrist! Featuring miniature hand-crocheted blossoms in blush, peach, lilac, buttercup, and sage, separated by tiny gleaming gold beads with an easy-hook lobster clasp.',
+    materials: 'Fine Mercerized Cotton Thread, Micro Faceted Gold Beads, Gold-Plated Clasp',
+    dimensions: 'Length: 16 cm + 4 cm adjustable extender | Flower Size: 1.2 cm',
+    care: 'Store flat in jewelry box. Avoid getting wet or soaking.',
+    colors: [
+      { name: 'Pastel Garden Medley', hex: '#F9D5D3' },
+      { name: 'Monochrome Blush & Pearl', hex: '#E8A6B4' },
+      { name: 'Sky & Daisy Harmony', hex: '#CDE5F7' }
+    ],
+    images: [
+      'images/product-images/jewellery-blossom-bracelet.jpg',
+      'images/categories/category-jewellery.jpg'
+    ],
+    stock: 14
+  },
+  {
+    id: 29,
+    name: 'Fairycore Butterfly & Blossom Ring Set',
+    slug: 'fairycore-butterfly-blossom-ring-set',
+    category: 'jewellery',
+    categoryName: 'Aesthetic Jewellery',
+    price: 620,
+    originalPrice: 790,
+    rating: 4.8,
+    reviewsCount: 22,
+    badge: 'New Arrival',
+    isFeatured: false,
+    isBestSeller: false,
+    isNewArrival: true,
+    shortDesc: 'A dreamy set of 2 adjustable gold rings featuring an ethereal micro-crochet pastel butterfly and tiny forget-me-not.',
+    description: 'Add whimsical cottagecore magic to your hands! This dainty 2-piece ring set features an ultra-fine crochet butterfly with micro-pearl antennae and a charming mini forget-me-not flower. Mounted on open-back adjustable gold-plated bands to fit any finger size.',
+    materials: 'Micro Mercerized Cotton Thread, Faux Pearl Accents, 18K Gold-Plated Adjustable Brass Bands',
+    dimensions: 'Butterfly: 1.8 cm across | Flower: 1.0 cm | Ring Band: Fully Adjustable (US 5-9)',
+    care: 'Do not wear while washing hands, sanitizing, or bathing.',
+    colors: [
+      { name: 'Lilac & White Blossom', hex: '#D6C7E8' },
+      { name: 'Blush Pink & Peach', hex: '#F7C6D0' },
+      { name: 'Mint & Baby Yellow', hex: '#D2EBD9' }
+    ],
+    images: [
+      'images/product-images/jewellery-butterfly-rings.jpg',
+      'images/categories/category-jewellery.jpg'
+    ],
+    stock: 16
+  },
+  {
+    id: 30,
+    name: 'Boho Scalloped Lace Wrist Cuff',
+    slug: 'boho-scalloped-lace-wrist-cuff',
+    category: 'jewellery',
+    categoryName: 'Aesthetic Jewellery',
+    price: 850,
+    originalPrice: 1100,
+    rating: 4.9,
+    reviewsCount: 19,
+    badge: 'Exclusive',
+    isFeatured: false,
+    isBestSeller: false,
+    isNewArrival: true,
+    shortDesc: 'Victorian-inspired scalloped micro-crochet lace cuff bracelet with seed pearl border and mother-of-pearl button.',
+    description: 'Intricate vintage elegance reimagined. Handcrafted with ultrafine cotton threads into an ornate Victorian scalloped lace motif, detailed with woven seed pearls along the borders and fastened with a genuine mother-of-pearl button.',
+    materials: '100% Combed Micro Cotton Lace Yarn, Glass Seed Pearls, Natural Mother-of-Pearl Button',
+    dimensions: 'Width: 3.5 cm | Length: 17 cm (Comfortable wrist fit)',
+    care: 'Hand wash gently in cold water with mild silk detergent. Lay flat to dry on towel.',
+    colors: [
+      { name: 'Vintage Antique Cream', hex: '#FFF8F0' },
+      { name: 'Soft Peach Blush', hex: '#FBE8E0' },
+      { name: 'Dusty Rose Lace', hex: '#E5B8C2' }
+    ],
+    images: [
+      'images/product-images/jewellery-lace-cuff.jpg',
+      'images/categories/category-jewellery.jpg'
+    ],
+    stock: 8
   }
 ];
 
