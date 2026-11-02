@@ -400,29 +400,29 @@ const PRODUCTS = [
   },
   {
     id: 12,
-    name: 'Lucky Four-Leaf Clover Keychain',
-    slug: 'lucky-four-leaf-clover-keychain',
+    name: 'Blooming Tulip Charm Keychain',
+    slug: 'blooming-tulip-charm-keychain',
     category: 'keychains',
     categoryName: 'Simple Keychains',
     price: 390,
     originalPrice: 500,
-    rating: 4.7,
-    reviewsCount: 18,
-    badge: 'Sale',
+    rating: 4.8,
+    reviewsCount: 23,
+    badge: 'Popular',
     isFeatured: false,
     isBestSeller: false,
-    isNewArrival: false,
-    shortDesc: 'A dainty four-leaf clover charm symbolising hope, faith, love, and good fortune.',
-    description: 'Crafted with lush emerald and mint yarns, this sweet four-leaf clover charm makes the perfect thoughtful gift for students, drivers, and cherished friends.',
-    materials: 'Milk Cotton Yarn, Hypoallergenic Clasp, Brass Ring',
-    dimensions: 'Clover: 6 cm x 6 cm | Length: 11 cm',
+    isNewArrival: true,
+    shortDesc: 'An adorable 3D amigurumi pink tulip flower charm with wooden beads and bronze swivel clasp.',
+    description: 'Add botanical cottagecore charm to your everyday carry! Hand-crocheted in petal-soft pink milk cotton yarn with twin green leaves and smooth natural wooden beads on a vintage bronze lobster clasp.',
+    materials: '100% Milk Cotton Yarn, Natural Wood Beads, Antique Bronze Clasp',
+    dimensions: 'Tulip: 5.5 cm x 4.5 cm | Total Length: 13.5 cm',
     care: 'Spot clean with mild damp sponge.',
     colors: [
-      { name: 'Emerald Clover', hex: '#589B6E' },
-      { name: 'Pastel Mint', hex: '#B8E2CE' }
+      { name: 'Pastel Rose Pink', hex: '#EAA6B8' },
+      { name: 'Buttercup Yellow', hex: '#FFF2B2' }
     ],
     images: [
-      'images/product-images/keychain-clover.jpg',
+      'images/product-images/keychain-tulip.jpg',
       'images/categories/category-keychains.jpg'
     ],
     stock: 20
@@ -462,8 +462,8 @@ const PRODUCTS = [
   },
   {
     id: 14,
-    name: 'Strawberry Blossoms Hair Clip',
-    slug: 'strawberry-blossoms-hair-clip',
+    name: 'Blush Petal Crochet Hair Clip',
+    slug: 'blush-petal-crochet-hair-clip',
     category: 'hair-clips',
     categoryName: 'Simple Hair Clips',
     price: 350,
@@ -474,14 +474,14 @@ const PRODUCTS = [
     isFeatured: false,
     isBestSeller: false,
     isNewArrival: true,
-    shortDesc: 'A sweet 3D mini crochet strawberry paired with tiny blossoms on a gold alligator hair clip.',
-    description: 'Adorably fresh! Hand-crocheted miniature red strawberry with white accent petals on a comfortable snag-free clip. Perfect for half-up hairstyles and side pins.',
-    materials: '100% Mercerized Cotton Thread, Snag-Free Metal Clip',
-    dimensions: 'Charm Length: 4.5 cm | Clip: 5 cm',
+    shortDesc: 'A dainty handcrafted blush pink crochet petal barrette accented with a sweet white blossom.',
+    description: 'Add soft cottagecore romance to your everyday hairstyle! Hand-stitched with premium milk cotton yarn in a delicate blush pink teardrop weave with a white accent flower, set securely on a gold alligator clip.',
+    materials: '100% Combed Milk Cotton Thread, Gold Alligator Clip',
+    dimensions: 'Clip Length: 5.5 cm | Petal Width: 3.0 cm',
     care: 'Spot clean gently.',
     colors: [
-      { name: 'Sweet Berry Red', hex: '#E55964' },
-      { name: 'Baby Pink Berry', hex: '#F8BFC9' }
+      { name: 'Blush & White Flower', hex: '#FADADD' },
+      { name: 'Peach Blossom', hex: '#FBE8E0' }
     ],
     images: [
       'images/product-images/hairclip-strawberry.jpg',
@@ -491,8 +491,8 @@ const PRODUCTS = [
   },
   {
     id: 15,
-    name: 'Pastel Butterfly Crochet Hair Clip',
-    slug: 'pastel-butterfly-crochet-hair-clip',
+    name: 'Lavender Floral Alligator Clip',
+    slug: 'lavender-floral-alligator-clip',
     category: 'hair-clips',
     categoryName: 'Simple Hair Clips',
     price: 360,
@@ -503,15 +503,14 @@ const PRODUCTS = [
     isFeatured: false,
     isBestSeller: false,
     isNewArrival: true,
-    shortDesc: 'An ethereal pastel lavender crochet butterfly with 3D wings secured to an alligator hair clip.',
-    description: 'Feel like a woodland fairy! Hand-crocheted 3D butterfly with dainty pastel wings that sit delicately in your hair. Lightweight, comfortable, and stays in place all day.',
-    materials: 'Soft Cotton Yarn, Snag-Free Alligator Clip',
-    dimensions: 'Butterfly: 4.5 cm x 4.0 cm',
-    care: 'Store flat in hair accessories box.',
+    shortDesc: 'A delicate textured lavender sprig blossom hand-crocheted on a snag-free gold alligator clip.',
+    description: 'Bring calming wildflower beauty to your hair! Meticulously hand-crocheted with fine purple cotton thread in a 3D double lavender blossom sprig with green stem, attached to a teeth-grip gold alligator clip that holds hair securely.',
+    materials: 'Fine Combed Cotton Thread, Gold-Tone Alligator Clip',
+    dimensions: 'Sprig: 5 cm x 3.5 cm | Clip: 5.5 cm',
+    care: 'Keep dry. Wipe metal clip with soft cloth.',
     colors: [
-      { name: 'Lavender Mist', hex: '#D6C7E8' },
-      { name: 'Peach Cream', hex: '#FBE8E0' },
-      { name: 'Sky Blue', hex: '#D6E8F7' }
+      { name: 'Lavender Mist', hex: '#A389D4' },
+      { name: 'Deep Violet', hex: '#7D5BA6' }
     ],
     images: [
       'images/product-images/hairclip-butterfly.jpg',
