@@ -19,9 +19,9 @@ const CATEGORIES = [
     id: 'coasters',
     name: 'Crochet Coasters',
     slug: 'coasters',
-    description: 'Thick, absorbent, and cheerful botanical drink coasters hand-crocheted to protect your desk in style.',
+    description: 'Thick, absorbent, and cheerful botanical and granny square drink coasters hand-crocheted to protect your desk in style.',
     image: 'images/categories/category-coasters.jpg',
-    fallbackImage: 'images/product-images/coaster-daisy-flower.jpg',
+    fallbackImage: 'images/product-images/coaster-granny-square.jpg',
     tagline: 'Warm Hugs for Your Mugs',
     itemCount: 3
   },
@@ -156,8 +156,8 @@ const PRODUCTS = [
   // ==========================================
   {
     id: 4,
-    name: 'Sunny Daisy Flower Coaster',
-    slug: 'sunny-daisy-flower-coaster',
+    name: 'Pastel Granny Square Mug Coaster',
+    slug: 'pastel-granny-square-mug-coaster',
     category: 'coasters',
     categoryName: 'Crochet Coasters',
     price: 290,
@@ -168,18 +168,18 @@ const PRODUCTS = [
     isFeatured: true,
     isBestSeller: true,
     isNewArrival: false,
-    shortDesc: 'A bright, cheerful blooming daisy mug coaster hand-crocheted with pure milk cotton to protect surfaces.',
-    description: 'Brighten your morning coffee routine! Hand-stitched with thick, absorbent 100% cotton yarn in clean white petals and a sunny yellow center. Protects desks and nightstands from heat, condensation, and scratches with joyful cottagecore charm.',
-    materials: '100% Natural Cotton Yarn (Heat-Resistant & Absorbent)',
-    dimensions: 'Diameter: 12.5 cm (Fits standard mugs, glasses, and teacups)',
-    care: 'Machine washable on gentle cycle in laundry bag or hand wash in warm water. Reshape and air dry flat.',
+    shortDesc: 'A classic beginner-friendly pastel granny square mug coaster with a rustic wooden center accent button.',
+    description: 'The quintessential beginner crochet creation! Handcrafted using the timeless, easy granny square stitch with 100% combed milk cotton yarn. Thick, absorbent, and completely flat to keep mugs, iced matcha glasses, and tumblers sturdy while protecting your desk from heat and spills.',
+    materials: '100% Combed Milk Cotton Yarn, Natural Wooden Accent Button',
+    dimensions: '11 cm x 11 cm (Fits standard mugs, glasses, and teacups)',
+    care: 'Machine washable on gentle cycle or hand wash in cool water. Lay flat to air dry.',
     colors: [
-      { name: 'Classic Daisy (Yellow & White)', hex: '#FFF4A3' },
-      { name: 'Pastel Pink Daisy', hex: '#FADADD' },
-      { name: 'Lilac Blossom', hex: '#E5D6F5' }
+      { name: 'Blush Pink & Buttercup', hex: '#F7C6D0' },
+      { name: 'Mint Green & Cream', hex: '#C8E6D3' },
+      { name: 'Pastel Sky Blue', hex: '#D6E8F7' }
     ],
     images: [
-      'images/product-images/coaster-daisy-flower.jpg',
+      'images/product-images/coaster-granny-square.jpg',
       'images/categories/category-coasters.jpg'
     ],
     stock: 25
@@ -237,7 +237,7 @@ const PRODUCTS = [
       { name: 'Buttercup & Lilac Duo', hex: '#FFF2B2' }
     ],
     images: [
-      'images/product-images/coaster-daisy-flower.jpg',
+      'images/product-images/coaster-granny-square.jpg',
       'images/product-images/coaster-sunflower-mug.jpg'
     ],
     stock: 14
