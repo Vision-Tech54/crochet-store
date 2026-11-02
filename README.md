@@ -2,14 +2,14 @@
 
 ## Crochet & Co. - Handmade Boutique 🧶✨
 
-A modern, responsive, and aesthetic e-commerce store for handmade crochet accessories, keychains, pouches, and hair accessories.
+A modern, responsive, and aesthetic e-commerce store for easy handmade crochet items: fluffy scrunchies, botanical coasters, cute sprout bookmarks, fruit/flower keychains, and hair clips.
 
-### 🌸 Features
-- **Homepage:** Featured products, hero slider, testimonials, and category highlights.
-- **Shop & Categories:** Filterable product listings with detailed views.
-- **Shopping Cart & Checkout:** Interactive cart management and order checkout flow.
-- **Wishlist:** Save favorite handmade items.
-- **About & Contact:** Brand story and customer support.
+### 🌸 Easy Collections (15 Handcrafted Items)
+- **Crochet Scrunchies:** Cloud-soft pastel ruffle and daisy scrunchies.
+- **Crochet Coasters:** Daisy and sunflower drink coasters.
+- **Crochet Bookmarks:** Viral sprout leaf and daisy ribbon bookmarks.
+- **Simple Keychains:** Daisy, strawberry, and four-leaf clover charms.
+- **Simple Hair Clips:** Daisy snap clips and strawberry hair barrettes.
 
 ### 🚀 Live Preview
 Deployable instantly to [Vercel](https://vercel.com).

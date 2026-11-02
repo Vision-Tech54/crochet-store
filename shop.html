@@ -113,32 +113,28 @@
             <h4 class="filter-title">Categories</h4>
             <div class="category-filter-list" id="category-filter-group">
               <button type="button" class="category-filter-btn active" data-category="all">
-                <span>All Collections</span>
-                <span class="cat-badge" id="cat-count-all">30</span>
+                <span>All Easy Creations</span>
+                <span class="cat-badge" id="cat-count-all">15</span>
               </button>
-              <button type="button" class="category-filter-btn" data-category="jewellery">
-                <span>Aesthetic Jewellery</span>
-                <span class="cat-badge">5</span>
+              <button type="button" class="category-filter-btn" data-category="scrunchies">
+                <span>Crochet Scrunchies</span>
+                <span class="cat-badge">3</span>
+              </button>
+              <button type="button" class="category-filter-btn" data-category="coasters">
+                <span>Crochet Coasters</span>
+                <span class="cat-badge">3</span>
+              </button>
+              <button type="button" class="category-filter-btn" data-category="bookmarks">
+                <span>Crochet Bookmarks</span>
+                <span class="cat-badge">3</span>
               </button>
               <button type="button" class="category-filter-btn" data-category="keychains">
-                <span>Crochet Keychains</span>
-                <span class="cat-badge">5</span>
-              </button>
-              <button type="button" class="category-filter-btn" data-category="earrings">
-                <span>Handmade Earrings</span>
-                <span class="cat-badge">5</span>
-              </button>
-              <button type="button" class="category-filter-btn" data-category="pouches">
-                <span>Crochet Mini Pouches</span>
-                <span class="cat-badge">5</span>
-              </button>
-              <button type="button" class="category-filter-btn" data-category="hairbands">
-                <span>Crochet Hairbands</span>
-                <span class="cat-badge">5</span>
+                <span>Simple Keychains</span>
+                <span class="cat-badge">3</span>
               </button>
               <button type="button" class="category-filter-btn" data-category="hair-clips">
-                <span>Handmade Hair Clips</span>
-                <span class="cat-badge">5</span>
+                <span>Simple Hair Clips</span>
+                <span class="cat-badge">3</span>
               </button>
             </div>
           </div>
@@ -147,10 +143,10 @@
           <div class="filter-block">
             <h4 class="filter-title">Max Price</h4>
             <div class="price-slider-wrapper">
-              <input type="range" id="price-range" class="price-range-input" min="400" max="2200" step="50" value="2200">
+              <input type="range" id="price-range" class="price-range-input" min="250" max="600" step="20" value="600">
               <div class="price-range-labels">
-                <span>Rs. 400</span>
-                <span id="price-range-display" style="font-weight: 700; color: var(--color-pink-dark);">Rs. 2,200</span>
+                <span>Rs. 250</span>
+                <span id="price-range-display" style="font-weight: 700; color: var(--color-pink-dark);">Rs. 600</span>
               </div>
             </div>
           </div>
@@ -166,7 +162,7 @@
           <!-- Controls Bar -->
           <div class="shop-controls">
             <div class="results-count" id="shop-results-count">
-              Showing <strong>30</strong> creations
+              Showing <strong>15</strong> creations
             </div>
 
             <!-- Sort Dropdown -->
@@ -368,7 +364,7 @@
 
     function resetFilters() {
       currentCategory = 'all';
-      currentMaxPrice = 2200;
+      currentMaxPrice = 600;
       currentSearchTerm = '';
       currentSort = 'featured';
 
@@ -378,8 +374,8 @@
 
       const priceSlider = document.getElementById('price-range');
       const priceDisplay = document.getElementById('price-range-display');
-      priceSlider.value = 2200;
-      priceDisplay.textContent = formatPrice(2200);
+      priceSlider.value = 600;
+      priceDisplay.textContent = formatPrice(600);
 
       const searchInput = document.getElementById('shop-search-input');
       const searchClear = document.getElementById('shop-search-clear');
