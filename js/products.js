@@ -39,21 +39,21 @@ const CATEGORIES = [
     id: 'keychains',
     name: 'Simple Keychains',
     slug: 'keychains',
-    description: 'Sweet floral and fruit amigurumi charms to brighten up your house keys, tote bags, and pencil cases.',
+    description: 'Sweet floral charms, blooming bell blossoms, fruit accents, and aesthetic ribbon bow keychains to brighten up your daily essentials.',
     image: 'images/categories/category-keychains.jpg',
     fallbackImage: 'images/product-images/keychain-daisy.jpg',
     tagline: 'Tiny Tokens of Joy',
-    itemCount: 3
+    itemCount: 5
   },
   {
     id: 'hair-clips',
     name: 'Simple Hair Clips',
     slug: 'hair-clips',
-    description: 'Dainty crochet daisies, coquette bows, blush petals, and lavender blossoms secured onto snag-free golden alligator clips.',
+    description: 'Dainty crochet daisies, blush petals, and lavender blossoms secured onto snag-free golden alligator clips.',
     image: 'images/categories/category-hairclips.jpg',
     fallbackImage: 'images/product-images/hairclips-floral-set.jpg',
     tagline: 'Whimsical Hair Accents',
-    itemCount: 4
+    itemCount: 3
   }
 ];
 
@@ -427,6 +427,66 @@ const PRODUCTS = [
     ],
     stock: 20
   },
+  {
+    id: 16,
+    name: 'Pink Crochet Bow Keychain',
+    slug: 'pink-crochet-bow-keychain',
+    category: 'keychains',
+    categoryName: 'Simple Keychains',
+    price: 350,
+    originalPrice: 450,
+    rating: 4.9,
+    reviewsCount: 34,
+    badge: 'Trending',
+    isFeatured: true,
+    isBestSeller: true,
+    isNewArrival: true,
+    shortDesc: 'A sweet handmade baby pink crochet bow keychain with flowing ribbon tails and a gold swivel clasp.',
+    description: 'Delicate, sweet, and charming! Hand-crocheted from ultra-soft 5-ply combed milk cotton yarn in an adorable baby pink hue, this dainty ribbon bow keychain features neat structured loops and pretty draped tails. Finished with an anti-tarnish gold-plated swivel lobster clasp and split keyring, it adds the perfect touch of handmade sweetness to keys, tote bags, backpacks, and AirPods.',
+    materials: '100% Combed Milk Cotton Yarn, Anti-Tarnish Gold-Plated Swivel Lobster Clasp & Keyring',
+    dimensions: 'Bow: 6.8 cm x 4.8 cm | Ribbon Tail Drop: 4.2 cm | Total Length with Clasp: 11.5 cm',
+    care: 'Spot clean gently with a damp cloth and mild soap. Lay flat to dry.',
+    colors: [
+      { name: 'Baby Blush Pink', hex: '#FADADD' },
+      { name: 'Petal Rose Pink', hex: '#F4B6C2' },
+      { name: 'Dusty Pink & Cream', hex: '#E8A6B4' }
+    ],
+    images: [
+      'images/product-images/keychain-pink-bow.jpg',
+      'images/categories/category-keychains.jpg'
+    ],
+    stock: 25
+  },
+  {
+    id: 17,
+    name: 'Purple Lily of the Valley Crochet Keychain',
+    slug: 'purple-lily-of-the-valley-crochet-keychain',
+    category: 'keychains',
+    categoryName: 'Simple Keychains',
+    price: 390,
+    originalPrice: 490,
+    rating: 4.9,
+    reviewsCount: 28,
+    badge: 'Popular',
+    isFeatured: true,
+    isBestSeller: false,
+    isNewArrival: true,
+    shortDesc: 'Handmade pastel purple crochet lily of the valley bell charm with delicate scalloped blossoms and gold clasp.',
+    description: 'Fairytale floral sweetness! Hand-crocheted using soft 5-ply milk cotton yarn in enchanting pastel purple and lilac tones, this delicate lily of the valley keychain features hanging bell-shaped blossoms with ruffled scalloped rims and gentle sage green leaves. Mounted on an anti-tarnish gold lobster swivel clasp and keyring, it adds magical cottagecore charm to tote bags, keys, backpacks, and accessories.',
+    materials: '100% Combed Milk Cotton Yarn, Anti-Tarnish Gold-Plated Swivel Lobster Clasp & Split Ring',
+    dimensions: 'Blossoms Cluster: 7.5 cm x 4.0 cm | Total Drop with Clasp: 12.5 cm',
+    care: 'Spot clean gently with a damp microfiber cloth and mild soap. Lay flat to air dry.',
+    colors: [
+      { name: 'Pastel Purple Lilac', hex: '#BFA2DB' },
+      { name: 'Lavender Mist', hex: '#D6C7E8' },
+      { name: 'Soft Violet', hex: '#8E6EAC' }
+    ],
+    images: [
+      'images/product-images/keychain-lily-of-valley.jpg',
+      'images/categories/category-keychains.jpg'
+    ],
+    stock: 20
+  },
 
   // ==========================================
   // CATEGORY 5: SIMPLE HAIR CLIPS
@@ -517,36 +577,6 @@ const PRODUCTS = [
       'images/categories/category-hairclips.jpg'
     ],
     stock: 19
-  },
-  {
-    id: 16,
-    name: 'Coquette Pastel Crochet Bow Hair Clip',
-    slug: 'coquette-pastel-crochet-bow-hair-clip',
-    category: 'hair-clips',
-    categoryName: 'Simple Hair Clips',
-    price: 350,
-    originalPrice: 450,
-    rating: 4.9,
-    reviewsCount: 28,
-    badge: 'Trending',
-    isFeatured: true,
-    isBestSeller: false,
-    isNewArrival: true,
-    shortDesc: 'A dainty handmade pastel pink crochet ribbon bow clip accented with a sweet micro-daisy.',
-    description: 'Sweet, charming, and timelessly coquette! Hand-crocheted using petal-soft 5-ply combed milk cotton yarn, this lightweight ribbon bow is accented with a delicate white daisy blossom at its pinched center and mounted onto a smooth, snag-free gold alligator clip. Perfect for styling side fringe, half-up buns, and braided hairstyles.',
-    materials: '100% Combed Milk Cotton Yarn, 5.5 cm Gold-Tone Alligator Clip',
-    dimensions: 'Bow: 7.0 cm x 5.0 cm | Clip Length: 5.5 cm',
-    care: 'Spot clean gently with a damp cloth and mild soap. Lay flat to dry.',
-    colors: [
-      { name: 'Ballet Blush Pink', hex: '#FADADD' },
-      { name: 'Buttercream Cream', hex: '#FFF9E6' },
-      { name: 'Lavender Mist', hex: '#D6C7E8' }
-    ],
-    images: [
-      'images/product-images/hairclip-bow.jpg',
-      'images/categories/category-hairclips.jpg'
-    ],
-    stock: 22
   }
 ];
 

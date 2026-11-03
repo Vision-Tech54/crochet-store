@@ -359,6 +359,11 @@
       const badgeEl = document.getElementById('detail-badge');
       if (product.badge) {
         badgeEl.textContent = product.badge;
+        let badgeClass = 'badge-pink';
+        if (product.badge === 'Sale') badgeClass = 'badge-peach';
+        if (product.badge === 'Trending') badgeClass = 'badge-lavender';
+        if (product.badge === 'Cozy' || product.badge === 'Dainty' || product.badge === 'Aesthetic') badgeClass = 'badge-sage';
+        badgeEl.className = `badge ${badgeClass}`;
         badgeEl.style.display = 'inline-block';
       } else {
         badgeEl.style.display = 'none';

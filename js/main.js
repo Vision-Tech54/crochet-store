@@ -99,7 +99,7 @@ function createProductCardHTML(product) {
     let badgeClass = 'badge-pink';
     if (product.badge === 'Sale') badgeClass = 'badge-peach';
     if (product.badge === 'Trending') badgeClass = 'badge-lavender';
-    if (product.badge === 'Cozy' || product.badge === 'Dainty') badgeClass = 'badge-sage';
+    if (product.badge === 'Cozy' || product.badge === 'Dainty' || product.badge === 'Aesthetic') badgeClass = 'badge-sage';
     badgeMarkup = `<span class="badge ${badgeClass} product-badge">${product.badge}</span>`;
   }
 
